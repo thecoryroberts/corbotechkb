@@ -2,6 +2,11 @@
   "label": "Docs Sidebar",
   "items": [
     {
+      "title": "AppScript",
+      "link": "generated",
+      "_template": "category"
+    },
+    {
       "title": "AppSheet",
       "link": "generated",
       "_template": "category"

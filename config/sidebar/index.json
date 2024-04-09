@@ -2,6 +2,11 @@
   "label": "Docs Sidebar",
   "items": [
     {
+      "title": "AppSheet",
+      "link": "generated",
+      "_template": "category"
+    },
+    {
       "document": "docs/intro.mdx",
       "_template": "doc"
     },

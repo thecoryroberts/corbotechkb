@@ -6,7 +6,8 @@
       "link": "generated",
       "items": [
         {
-          "document": "docs/Failed-to-start-The-Apache-HTTP-Server.mdx",
+          "document": "docs/Ubuntu/Failed-to-start-The-Apache-HTTP-Server.mdx.mdx",
+          "label": "ubuntu/Failed-to-start-The-Apache-HTTP-Server.mdx",
           "_template": "doc"
         }
       ],

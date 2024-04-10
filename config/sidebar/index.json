@@ -2,28 +2,6 @@
   "label": "Docs Sidebar",
   "items": [
     {
-      "title": "Ubuntu",
-      "link": "generated",
-      "items": [
-        {
-          "document": "docs/Ubuntu/Failed-to-start-The-Apache-HTTP-Server.mdx.mdx",
-          "label": "ubuntu/Failed-to-start-The-Apache-HTTP-Server.mdx",
-          "_template": "doc"
-        }
-      ],
-      "_template": "category"
-    },
-    {
-      "title": "AppScript",
-      "link": "generated",
-      "_template": "category"
-    },
-    {
-      "title": "AppSheet",
-      "link": "generated",
-      "_template": "category"
-    },
-    {
       "document": "docs/intro.mdx",
       "_template": "doc"
     },

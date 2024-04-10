@@ -6,7 +6,7 @@
   },
   "title": "corbo.teck kb",
   "tagline": "Personal knowledge & code base",
-  "url": "corbo.tech",
+  "url": "https://corbotechkb.vercel.app",
   "navbar": [
     {
       "label": "Docs",

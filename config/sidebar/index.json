@@ -6,6 +6,11 @@
       "_template": "doc"
     },
     {
+      "title": "Ubuntu",
+      "link": "generated",
+      "_template": "category"
+    },
+    {
       "title": "Tutorial - Basics",
       "link": "generated",
       "items": [

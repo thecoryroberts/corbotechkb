@@ -49,8 +49,7 @@
     },
     {
       "title": "Troubleshooting",
-      "link": "doc",
-      "docLink": "docs/tutorial-extras/failed-to-start-the-apache-http-server.mdx",
+      "link": "generated",
       "_template": "category"
     },
     {

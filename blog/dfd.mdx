@@ -1,12 +1,96 @@
 ---
-title: dfd
+title: Setting up website on Apache2 webserver
 authors:
   - name: Cory Roberts
     title: Developer
     url: 'https://coryroberts.net'
     image_url: 'https://avatars.githubusercontent.com/u/115775398?v=4'
-  - {}
 date: '2024-04-11'
+tags:
+  - apache2
+  - ubuntu
+  - webserver
+  - tutorial
 ---
 
-[https://avatars.githubusercontent.com/u/115775398?v=4](https://avatars.githubusercontent.com/u/115775398?v=4)
+### Synopsis
+
+Let’s walk through the steps to set up a website using Apache2 on Ubuntu. Apache2 is a popular web server software that allows you to host websites and serve web content. Here’s how to get started:
+
+### Install Apache2
+
+First, make sure you have Apache2 installed on your Ubuntu server. 
+
+Open a terminal and run the following command:
+
+sudo apt-get updatesudo apt-get install apache2\
+
+
+### Start Apache2 Service
+
+After installation, start the Apache2 service:
+
+sudo systemctl start apache2\
+
+
+### Verify Installation
+
+Open a web browser and visit your server’s IP address or domain name (if you’ve already set up DNS). You should see the default Apache2 welcome page.\
+
+
+### Create Your Website Directory
+
+By default, Apache2 serves content from the /var/www/html directory. You can create your website files there:
+
+sudo mkdir /var/www/html/mywebsite\
+
+
+### Create an HTML File
+
+Create an index.html file inside your website directory:
+
+sudo nano /var/www/html/mywebsite/index.html
+
+Add some content to your HTML file (e.g., “Welcome to My Website!”). Save and close the file.
+
+### &#x20;Set Permissions
+
+Make sure the Apache2 user has permission to read your website files:
+
+sudo chown -R www-data\\\:www-data /var/www/html/mywebsite
+
+### &#x20;Create a Virtual Host Configuration
+
+Create a virtual host configuration file for your website:
+
+sudo nano /etc/apache2/sites-available/mywebsite.conf
+
+Add the following content (replace mywebsite.com with your actual domain or IP address):
+
+```html
+<VirtualHost/*: 80 >
+  ServerAdmin webmaster\@mywebsite.com
+  DocumentRoot /var/www/html / mywebsite   
+  ServerName mywebsite.com    
+  ErrorLog ${ APACHE\_LOG\_DIR } /error.log    
+  CustomLog ${ APACHE\_LOG\_DIR } /access.log combined\
+</VirtualHost >
+```
+
+### &#x20;Enable the Virtual Host
+
+Enable your virtual host configuration:
+
+sudo a2ensite mywebsite.conf
+
+### &#x20;Reload Apache2 Configuration
+
+Reload Apache2 to apply the changes:
+
+sudo systemctl reload apache2
+
+### &#x20;Test Your Website
+
+Visit your website in a web browser using your domain or IP address. You should see the content you added to your index.html file.
+
+That’s it! You’ve set up a basic website using Apache2. You can now customize your site further by adding more HTML, CSS, and other files to your website directory. 

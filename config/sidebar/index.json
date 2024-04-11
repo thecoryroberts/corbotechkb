@@ -2,12 +2,6 @@
   "label": "Docs Sidebar",
   "items": [
     {
-      "title": "Troubleshooting",
-      "link": "doc",
-      "docLink": "docs/tutorial-extras/failed-to-start-the-apache-http-server.mdx",
-      "_template": "category"
-    },
-    {
       "document": "docs/intro.mdx",
       "_template": "doc"
     },
@@ -51,6 +45,12 @@
           "_template": "doc"
         }
       ],
+      "_template": "category"
+    },
+    {
+      "title": "Troubleshooting",
+      "link": "doc",
+      "docLink": "docs/tutorial-extras/failed-to-start-the-apache-http-server.mdx",
       "_template": "category"
     },
     {

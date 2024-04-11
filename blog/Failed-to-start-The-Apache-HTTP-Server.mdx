@@ -13,13 +13,15 @@ tags:
   - troubleshooting
 ---
 
+### The Error:
+
 The error message “Failed to start The Apache HTTP Server” can occur due to various reasons. Let’s troubleshoot and resolve this issue:
 
 ### Check Apache2 Service Status:
 
 Open a terminal on your Ubuntu server.
 
-Run the following command to check the status of the Apache2 service: 
+Run the following command to check the status of the Apache2 service:
 
 `sudo systemctl status apache2`
 
@@ -27,22 +29,26 @@ This will provide information about whether the service is active, inactive, or 
 
 ### Unmasking the Apache2 Service:
 
-If the service is masked, you can unmask it using: `sudo systemctl unmask apache2`
+If the service is masked, you can unmask it using: 
 
-Then restart the service: `sudo service apache2 restart`
+`sudo systemctl unmask apache2`
 
-### 3. Reinstall Apache2 (if needed):
+Then restart the service: 
+
+`sudo service apache2 restart`
+
+### Reinstall Apache2 (if needed):
 
 Sometimes configuration files get deleted or corrupted.
 
-To reinstall Apache2 without purging the package, use: 
+To reinstall Apache2 without purging the package, use:
 
 `sudo apt-get -o DPkg::Options::="--force-confmiss" --reinstall install apache2`
 
-If you want to fully remove the Apache2 config files, use: 
+If you want to fully remove the Apache2 config files, use:
 
 `sudo apt-get purge apache2`
 
-\* Then reinstall it in the usual way.
+Then reinstall it in the usual way.
 
-Remember to investigate further if the issue persists. Happy troubleshooting! 
+Remember to investigate further if the issue persists. Happy troubleshooting!
